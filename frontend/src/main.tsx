@@ -15,7 +15,7 @@ const queryClient = new QueryClient({
 	},
 });
 
-const mountId = "hotel-frontdesk-root";
+const mountId = "stayops-root";
 const mountNode = document.getElementById(mountId);
 if (!mountNode) {
 	throw new Error(`Mount node #${mountId} not found.`);
