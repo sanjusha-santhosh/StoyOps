@@ -1,0 +1,275 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "naming_series:",
+  "creation": "2026-07-11 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "reservation_number",
+    "property",
+    "status",
+    "section_break_guest_information",
+    "guest_type",
+    "customer",
+    "guest_name",
+    "email",
+    "phone",
+    "adults",
+    "children",
+    "section_break_stay_details",
+    "room_type",
+    "rate_plan",
+    "check_in",
+    "check_out",
+    "nights",
+    "special_requests",
+    "section_break_erpnext_integration",
+    "sales_order",
+    "sales_invoice",
+    "total_amount"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Naming Series",
+      "options": "RES-.YYYY.-",
+      "reqd": 1,
+      "default": "RES-.YYYY.-"
+    },
+    {
+      "fieldname": "reservation_number",
+      "fieldtype": "Data",
+      "label": "Reservation Number",
+      "read_only": 1,
+      "in_list_view": 1,
+      "search_index": 1
+    },
+    {
+      "fieldname": "property",
+      "fieldtype": "Link",
+      "label": "Property",
+      "options": "Property",
+      "reqd": 1,
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Draft\nConfirmed\nChecked In\nChecked Out\nCancelled\nNo Show",
+      "default": "Draft",
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "section_break_guest_information",
+      "fieldtype": "Section Break",
+      "label": "Guest Information"
+    },
+    {
+      "fieldname": "guest_type",
+      "fieldtype": "Select",
+      "label": "Guest Type",
+      "options": "Individual\nCompany\nTravel Agent",
+      "default": "Individual"
+    },
+    {
+      "fieldname": "customer",
+      "fieldtype": "Link",
+      "label": "Customer",
+      "options": "Customer"
+    },
+    {
+      "fieldname": "guest_name",
+      "fieldtype": "Data",
+      "label": "Guest Name",
+      "reqd": 1,
+      "in_list_view": 1,
+      "in_global_search": 1
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "label": "Email"
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Data",
+      "label": "Phone"
+    },
+    {
+      "fieldname": "adults",
+      "fieldtype": "Int",
+      "label": "Adults",
+      "reqd": 1,
+      "default": 1
+    },
+    {
+      "fieldname": "children",
+      "fieldtype": "Int",
+      "label": "Children",
+      "default": 0
+    },
+    {
+      "fieldname": "section_break_stay_details",
+      "fieldtype": "Section Break",
+      "label": "Stay Details"
+    },
+    {
+      "fieldname": "room_type",
+      "fieldtype": "Link",
+      "label": "Room Type",
+      "options": "Room Type",
+      "reqd": 1,
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "rate_plan",
+      "fieldtype": "Link",
+      "label": "Rate Plan",
+      "options": "Rate Plan"
+    },
+    {
+      "fieldname": "check_in",
+      "fieldtype": "Datetime",
+      "label": "Check In",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "check_out",
+      "fieldtype": "Datetime",
+      "label": "Check Out",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "nights",
+      "fieldtype": "Int",
+      "label": "Nights",
+      "read_only": 1
+    },
+    {
+      "fieldname": "special_requests",
+      "fieldtype": "Text",
+      "label": "Special Requests"
+    },
+    {
+      "fieldname": "section_break_erpnext_integration",
+      "fieldtype": "Section Break",
+      "label": "ERPNext Integration"
+    },
+    {
+      "fieldname": "sales_order",
+      "fieldtype": "Link",
+      "label": "Sales Order",
+      "options": "Sales Order",
+      "read_only": 1
+    },
+    {
+      "fieldname": "sales_invoice",
+      "fieldtype": "Link",
+      "label": "Sales Invoice",
+      "options": "Sales Invoice",
+      "read_only": 1
+    },
+    {
+      "fieldname": "total_amount",
+      "fieldtype": "Currency",
+      "label": "Total Amount",
+      "read_only": 1,
+      "in_list_view": 1
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "is_submittable": 0,
+  "links": [],
+  "modified": "2026-07-11 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "stayops",
+  "name": "Reservation",
+  "naming_rule": "By \"Naming Series\" (separated by -)",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    },
+    {
+      "role": "Hotel Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 0,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    },
+    {
+      "role": "Hotel Receptionist",
+      "permlevel": 0,
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "delete": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 0,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    },
+    {
+      "role": "Hotel Housekeeping",
+      "permlevel": 0,
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "delete": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 0,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1,
+  "track_seen": 1,
+  "track_views": 1
+}

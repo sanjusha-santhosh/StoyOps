@@ -1,5 +1,5 @@
-app_name = "hotel_management"
-app_title = "Hotel Management"
+app_name = "stayops"
+app_title = "StayOps"
 app_publisher = "Hotel PMS"
 app_description = "Hotel Property Management System"
 app_email = "info@hotelpms.com"
@@ -13,11 +13,11 @@ app_license = "mit"
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
 # 	{
-# 		"name": "hotel_management",
-# 		"logo": "/assets/hotel_management/logo.png",
-# 		"title": "Hotel Management",
-# 		"route": "/hotel_management",
-# 		"has_permission": "hotel_management.api.permission.has_app_permission"
+# 		"name": "stayops",
+# 		"logo": "/assets/stayops/logo.png",
+# 		"title": "StayOps",
+# 		"route": "/stayops",
+# 		"has_permission": "stayops.api.permission.has_app_permission"
 # 	}
 # ]
 
@@ -25,15 +25,15 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/hotel_management/css/hotel_management.css"
-# app_include_js = "/assets/hotel_management/js/hotel_management.js"
+# app_include_css = "/assets/stayops/css/stayops.css"
+# app_include_js = "/assets/stayops/js/stayops.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/hotel_management/css/hotel_management.css"
-# web_include_js = "/assets/hotel_management/js/hotel_management.js"
+# web_include_css = "/assets/stayops/css/stayops.css"
+# web_include_js = "/assets/stayops/js/stayops.js"
 
 # include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "hotel_management/public/scss/website"
+# website_theme_scss = "stayops/public/scss/website"
 
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
@@ -51,7 +51,7 @@ app_license = "mit"
 # Svg Icons
 # ------------------
 # include app icons in desk
-# app_include_icons = "hotel_management/public/icons.svg"
+# app_include_icons = "stayops/public/icons.svg"
 
 # Home Pages
 # ----------
@@ -75,43 +75,43 @@ app_license = "mit"
 
 # add methods and filters to jinja environment
 # jinja = {
-# 	"methods": "hotel_management.utils.jinja_methods",
-# 	"filters": "hotel_management.utils.jinja_filters"
+# 	"methods": "stayops.utils.jinja_methods",
+# 	"filters": "stayops.utils.jinja_filters"
 # }
 
 # Installation
 # ------------
 
-# before_install = "hotel_management.install.before_install"
-# after_install = "hotel_management.install.after_install"
+# before_install = "stayops.install.before_install"
+after_install = "stayops.setup.after_install"
 
 # Uninstallation
 # ------------
 
-# before_uninstall = "hotel_management.uninstall.before_uninstall"
-# after_uninstall = "hotel_management.uninstall.after_uninstall"
+# before_uninstall = "stayops.uninstall.before_uninstall"
+# after_uninstall = "stayops.uninstall.after_uninstall"
 
 # Integration Setup
 # ------------------
 # To set up dependencies/integrations with other apps
 # Name of the app being installed is passed as an argument
 
-# before_app_install = "hotel_management.utils.before_app_install"
-# after_app_install = "hotel_management.utils.after_app_install"
+# before_app_install = "stayops.utils.before_app_install"
+# after_app_install = "stayops.utils.after_app_install"
 
 # Integration Cleanup
 # -------------------
 # To clean up dependencies/integrations with other apps
 # Name of the app being uninstalled is passed as an argument
 
-# before_app_uninstall = "hotel_management.utils.before_app_uninstall"
-# after_app_uninstall = "hotel_management.utils.after_app_uninstall"
+# before_app_uninstall = "stayops.utils.before_app_uninstall"
+# after_app_uninstall = "stayops.utils.after_app_uninstall"
 
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-# notification_config = "hotel_management.notifications.get_notification_config"
+# notification_config = "stayops.notifications.get_notification_config"
 
 # Permissions
 # -----------
@@ -150,39 +150,39 @@ app_license = "mit"
 
 # scheduler_events = {
 # 	"all": [
-# 		"hotel_management.tasks.all"
+# 		"stayops.tasks.all"
 # 	],
 # 	"daily": [
-# 		"hotel_management.tasks.daily"
+# 		"stayops.tasks.daily"
 # 	],
 # 	"hourly": [
-# 		"hotel_management.tasks.hourly"
+# 		"stayops.tasks.hourly"
 # 	],
 # 	"weekly": [
-# 		"hotel_management.tasks.weekly"
+# 		"stayops.tasks.weekly"
 # 	],
 # 	"monthly": [
-# 		"hotel_management.tasks.monthly"
+# 		"stayops.tasks.monthly"
 # 	],
 # }
 
 # Testing
 # -------
 
-# before_tests = "hotel_management.install.before_tests"
+# before_tests = "stayops.install.before_tests"
 
 # Overriding Methods
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "hotel_management.event.get_events"
+# 	"frappe.desk.doctype.event.event.get_events": "stayops.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-# 	"Task": "hotel_management.task.get_dashboard_data"
+# 	"Task": "stayops.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -196,13 +196,13 @@ app_license = "mit"
 
 # Request Events
 # ----------------
-# before_request = ["hotel_management.utils.before_request"]
-# after_request = ["hotel_management.utils.after_request"]
+# before_request = ["stayops.utils.before_request"]
+# after_request = ["stayops.utils.after_request"]
 
 # Job Events
 # ----------
-# before_job = ["hotel_management.utils.before_job"]
-# after_job = ["hotel_management.utils.after_job"]
+# before_job = ["stayops.utils.before_job"]
+# after_job = ["stayops.utils.after_job"]
 
 # User Data Protection
 # --------------------
@@ -232,7 +232,7 @@ app_license = "mit"
 # --------------------------------
 
 # auth_hooks = [
-# 	"hotel_management.auth.validate"
+# 	"stayops.auth.validate"
 # ]
 
 # Automatically update python controller files with type annotations for this app.

@@ -1,5 +1,5 @@
 [project]
-name = "hotel_management"
+name = "stayops"
 authors = [
     { name = "Hotel PMS", email = "info@hotelpms.com"}
 ]

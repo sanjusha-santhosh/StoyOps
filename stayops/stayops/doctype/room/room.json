@@ -1,0 +1,207 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "field:room_number",
+  "creation": "2026-07-11 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "property",
+    "building",
+    "floor",
+    "room_type",
+    "room_number",
+    "room_name",
+    "bed_type",
+    "is_smoking",
+    "status",
+    "operational_status",
+    "description"
+  ],
+  "fields": [
+    {
+      "fieldname": "property",
+      "fieldtype": "Link",
+      "label": "Property",
+      "options": "Property",
+      "reqd": 1,
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "building",
+      "fieldtype": "Link",
+      "label": "Building",
+      "options": "Building",
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "floor",
+      "fieldtype": "Link",
+      "label": "Floor",
+      "options": "Floor",
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "room_type",
+      "fieldtype": "Link",
+      "label": "Room Type",
+      "options": "Room Type",
+      "reqd": 1,
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "room_number",
+      "fieldtype": "Data",
+      "label": "Room Number",
+      "reqd": 1,
+      "in_list_view": 1,
+      "search_index": 1
+    },
+    {
+      "fieldname": "room_name",
+      "fieldtype": "Data",
+      "label": "Room Name"
+    },
+    {
+      "fieldname": "bed_type",
+      "fieldtype": "Select",
+      "label": "Bed Type",
+      "options": "Single\nDouble\nQueen\nKing\nTwin\nSuite",
+      "default": "Double"
+    },
+    {
+      "fieldname": "is_smoking",
+      "fieldtype": "Check",
+      "label": "Is Smoking"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nInactive",
+      "default": "Active",
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "operational_status",
+      "fieldtype": "Select",
+      "label": "Operational Status",
+      "options": "Clean\nDirty\nInspection\nMaintenance",
+      "default": "Clean",
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Text",
+      "label": "Description"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "is_submittable": 0,
+  "links": [
+    {
+      "group": "Reservations",
+      "link_doctype": "Room Assignment",
+      "link_fieldname": "room"
+    },
+    {
+      "group": "Housekeeping",
+      "link_doctype": "Housekeeping",
+      "link_fieldname": "room"
+    },
+    {
+      "group": "Maintenance",
+      "link_doctype": "Maintenance",
+      "link_fieldname": "room"
+    }
+  ],
+  "modified": "2026-07-11 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "stayops",
+  "name": "Room",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    },
+    {
+      "role": "Hotel Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 0,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    },
+    {
+      "role": "Hotel Receptionist",
+      "permlevel": 0,
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "delete": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 0,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    },
+    {
+      "role": "Hotel Housekeeping",
+      "permlevel": 0,
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "delete": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 0,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1,
+  "track_seen": 1,
+  "track_views": 1
+}

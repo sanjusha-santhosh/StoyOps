@@ -1,0 +1,197 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "field:property_code",
+  "creation": "2026-07-11 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "property_code",
+    "property_name",
+    "section_break_address_&_contact",
+    "address",
+    "city",
+    "country",
+    "postal_code",
+    "phone",
+    "email",
+    "section_break_configuration",
+    "default_checkin_time",
+    "default_checkout_time",
+    "timezone",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "property_code",
+      "fieldtype": "Data",
+      "label": "Property Code",
+      "reqd": 1,
+      "in_list_view": 1,
+      "search_index": 1
+    },
+    {
+      "fieldname": "property_name",
+      "fieldtype": "Data",
+      "label": "Property Name",
+      "reqd": 1,
+      "in_list_view": 1,
+      "in_global_search": 1
+    },
+    {
+      "fieldname": "section_break_address_&_contact",
+      "fieldtype": "Section Break",
+      "label": "Address & Contact"
+    },
+    {
+      "fieldname": "address",
+      "fieldtype": "Text",
+      "label": "Address"
+    },
+    {
+      "fieldname": "city",
+      "fieldtype": "Data",
+      "label": "City",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "country",
+      "fieldtype": "Link",
+      "label": "Country",
+      "options": "Country"
+    },
+    {
+      "fieldname": "postal_code",
+      "fieldtype": "Data",
+      "label": "Postal Code"
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Data",
+      "label": "Phone"
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "label": "Email"
+    },
+    {
+      "fieldname": "section_break_configuration",
+      "fieldtype": "Section Break",
+      "label": "Configuration"
+    },
+    {
+      "fieldname": "default_checkin_time",
+      "fieldtype": "Time",
+      "label": "Default Checkin Time",
+      "default": "14:00:00"
+    },
+    {
+      "fieldname": "default_checkout_time",
+      "fieldtype": "Time",
+      "label": "Default Checkout Time",
+      "default": "11:00:00"
+    },
+    {
+      "fieldname": "timezone",
+      "fieldtype": "Data",
+      "label": "Timezone",
+      "default": "Asia/Dubai"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nInactive",
+      "default": "Active",
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "is_submittable": 0,
+  "links": [],
+  "modified": "2026-07-11 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "stayops",
+  "name": "Property",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    },
+    {
+      "role": "Hotel Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 0,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    },
+    {
+      "role": "Hotel Receptionist",
+      "permlevel": 0,
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "delete": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 0,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    },
+    {
+      "role": "Hotel Housekeeping",
+      "permlevel": 0,
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "delete": 0,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 0,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1,
+  "track_seen": 1,
+  "track_views": 1
+}

@@ -1,0 +1,14 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block page_content %}
+<div id="hotel-frontdesk-root"></div>
+<script>
+    window.csrf_token = "{{ frappe.session.csrf_token }}";
+    window.frappe_user = "{{ user }}";
+</script>
+<script type="module" src="/assets/stayops/frontend/assets/index.js"></script>
+<link rel="stylesheet" href="/assets/stayops/frontend/assets/index.css" />
+<link rel="icon" type="image/svg+xml" href="/assets/stayops/frontend/vite.svg" />
+{% endblock %}
